@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>Solomon難易度表</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bmstable" content="header.json" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header class="mb-3">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Solomon難易度表</span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="alert alert-dark mb-3" role="alert">
+            <p>通常皆伝程度である★15以上を対象とした地力譜面と癖譜面が混在するコンセプトの★準拠の難易度表。</p>
+            難易度基準（イージー基準&ハード難易度が高い場合引き上げ）<br>
+            ✡15＝★10～15<br>
+            ✡16～24＝★16～24<br>
+            ✡25＝★★5＝st6～7<br>
+            ✡26＝★★5＝st8～9弱<br>
+            ✡27＝★★6＝st9強～10<br>
+            ✡28＝★★7＝st11～12<br>
+            </p>
+            段位はRANDOMオプションを使用可能（beatoraja）段位は各2コースあり、2はかなり難しめ想定で腕試し用。<br>
+            <p><a href="https://www.youtube.com/playlist?list=PLGHiqlFm8P3zbe2YbxmKPZnx_VujbknnO">段位曲一覧動画(YouTube)</a>　2023年4月25日段位第1期実装。LR2コースファイルは<a href="https://www.dropbox.com/s/tq8knt9efkahubx/Solomon%E6%AE%B5%E4%BD%8D%E8%AA%8D%E5%AE%9A%E7%AC%AC1%E6%9C%9F.lr2crs?dl=1">ここ</a>からDL可能。</p>
+            <p><a href="https://drive.google.com/u/1/uc?id=1frGN9GYK8Sc1Xepo7lY-kDz30ef_7LPz&export=download">オルゴール選曲BGM8曲セット</a>　Solomon難易度表おまけ特典</p>
+            <p><a href="https://twitter.com/Solomon_BMS">X(Twitter)</a>　<a href="https://discord.com/invite/6CkQP6955a">Discord</a>　更新履歴や連絡などはこちら </p>
+            <p>最終更新：2025/05/06</p>
+        </div>
+
+
+        <!--ここから難易度表本体-->
+        <div>
+            <table class="table table-light table-striped table-hover table-sm" id="table_int">
+            </table>
+        </div>
+        <script language="javascript" type="text/javascript">
+            $(document).ready(function () {
+                $.getJSON($("meta[name=bmstable]").attr("content"), function (header) {
+                    $.getJSON(header.data_url, function (information) {
+                        makeBMSTable(information, header.symbol);
+                    });
+                });
+            });
+
+            function makeBMSTable(info, mark) {
+                var x = "";
+                var ev = "";
+                var count = 0;
+                var obj = $("#table_int");
+
+                obj.html("");
+                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>SongArtist</th><th>Charter</th><th>ChartView</th></tr></thead><tbody>")
+                    .appendTo(obj);
+                var obj_sep = null;
+                for (var i = 0; i < info.length; i++) {
+                    if (x != info[i].level) {
+                        if (obj_sep != null) {
+                            obj_sep.html("<td colspan='5'>" + "<b>" + mark + x + " (" + count +
+                                "譜面)</b></td>");
+                        }
+                        obj_sep = $("<tr class='table-dark' style='text-align:center' id='" + mark + info[i].level +
+                            "'></tr>");
+                        obj_sep.appendTo(obj);
+                        count = 0;
+                        x = info[i].level;
+                    }
+
+                    var str = $("<tr></tr>");
+
+                    // Level
+                    $("<td width='5%'>" + mark + x + "</td>").appendTo(str);
+
+                    // Title
+                    $("<td width='35%'>" +
+                        "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[
+                            i]
+                        .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
+
+                    // Artist
+                    $("<td width='25%'>" + info[i].song_artist + "</td>").appendTo(str);
+                    
+                    // Charter
+                    $("<td width='25%'>" + info[i].charter + "</td>").appendTo(str);
+
+                    // 譜面画像
+                    $("<td width='10%'>" +
+                        "<a href='https://bms-score-viewer.pages.dev/view?md5=" + info[
+                            i]
+                        .md5 + "' target='_blank'>" + "譜面画像" + "</a></td>").appendTo(str);
+                    
+                    str.appendTo(obj);
+                    count++;
+                }
+                $("</tbody>").appendTo(obj);
+
+                if (obj_sep != null) {
+                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='5'>" + "<b>" + mark + x +
+                        " (" + count + "譜面)</b></td>");
+                }
+            }
+        </script>
+    </div>
+
+</html>
+
