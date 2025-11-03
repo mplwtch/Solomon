@@ -1,8 +1,8 @@
-{"name" : "Solomon難易度表",
+{
+  "name" : "Solomon難易度表",
   "symbol" : "✡",
   "data_url" : "https://script.googleusercontent.com/macros/echo?user_content_key=x2zOgR8HfNkQ6TnHzlkKoE8JMb9woyjKa3y0pNIXZ3_iotueZbKCpXT5y-ynE4e6Y2NuPtRtXYeLuPwBqkSstrJoHCalajdIm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMR7cNnV8a75NGjQBtxNujoGdV-7j3JVfESX37ULYcQWh9bFtzDGgxbcrb2L2XezaHdukmdRA5GrHySAa7uIkNOjCM1Dfljq_w&lib=MznwyjOlysIhmj79D6u027f-2qzvq4NmQ",
   "level_order" : [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,"提案"],
-  
 "course":[
 {"name":"Solomon 第1期 発狂九段","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["f6b6559b7f74ddfa82fd00e1ab6f3e44","0bcc907d2af998f13d304f8a50ce2e52","9076c384d78d4b5f77a2517a7b06e506","79dc444b48299814462ff23a2bf3ab79"]},
 {"name":"Solomon 第1期 発狂九段2","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["5b872da4e08d476f81a61f5e1cdd00c6","45b6a94349443e21fcc2b9c542c1fe50","34830e1501d13911bec3c74bab69c7a1","ea3a88b264187f1a1516977309fd6b12"]},
@@ -31,5 +31,4 @@
 {"name":"Solomon 第2期 Overjoy2","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["e72fb8c3ae721f4dc75cbf27389e6007","95e6713dbd45c83d79cf97c65517dde1","8ab28f746150633f3fca4a5ef5a6d969","db3a17eb15d4440bdc7316f1a6da6c53"]},
 {"name":"Solomon 第2期 Solomon","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["a0374d816bce0b8e41e2eb13ec12cf72","b8359b62d1dc04632f9cbf12bd39dbb6","be72a3cd770e514ff3c61f818f67a26d","019ac1a99cd2e4e1d971e85089ec474a"]},
 {"name":"Solomon 第2期 Solomon2","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["7f8c6e0fe84d35ceac96c2070caa8adc","be057d989e0b40b76254133e7df3c6ac","61a3e1b17df344e652f0a47a6084e806","107b4c2148da8b6222e1b8b0fe63dd95"]}
-
 ]}
