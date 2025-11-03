@@ -7,7 +7,7 @@
 {
 "name" : "Solomon難易度表",
 "symbol" : "✡",
-"data_url" : "https://script.google.com/macros/s/AKfycbwiOBS9SVaKHurq1oKyFUoNbFQPq_0jRO1wAAi2z05dat3zCHo46axefE9im1DFh24P/exec",
+"data_url" : "https://script.google.com/macros/s/AKfycbzDJoMyecKxofvLGbndUmL3QfKNkAKVmtaBzKPDbtQzAbg2T5ZLVQZK-IzpkdLFf0g/exec",
 "level_order" : [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,"提案"],
 "course":[
 {"name":"Solomon 第1期 発狂九段","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["f6b6559b7f74ddfa82fd00e1ab6f3e44","0bcc907d2af998f13d304f8a50ce2e52","9076c384d78d4b5f77a2517a7b06e506","79dc444b48299814462ff23a2bf3ab79"]},
