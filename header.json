@@ -1,5 +1,33 @@
+
+
+
+
+
+
 {
-  "name" : "Solomon難易度表",
-  "symbol" : "✡",
-  "data_url" : "https://script.google.com/macros/s/AKfycbzDJoMyecKxofvLGbndUmL3QfKNkAKVmtaBzKPDbtQzAbg2T5ZLVQZK-IzpkdLFf0g/exec",
-}
+"name" : "Solomon難易度表",
+"symbol" : "✡",
+"data_url" : "https://script.google.com/macros/s/AKfycbwiOBS9SVaKHurq1oKyFUoNbFQPq_0jRO1wAAi2z05dat3zCHo46axefE9im1DFh24P/exec",
+"level_order" : [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,"提案"],
+"course":[
+{"name":"Solomon 第1期 発狂九段","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["f6b6559b7f74ddfa82fd00e1ab6f3e44","0bcc907d2af998f13d304f8a50ce2e52","9076c384d78d4b5f77a2517a7b06e506","79dc444b48299814462ff23a2bf3ab79"]},
+{"name":"Solomon 第1期 発狂九段2","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["5b872da4e08d476f81a61f5e1cdd00c6","45b6a94349443e21fcc2b9c542c1fe50","34830e1501d13911bec3c74bab69c7a1","ea3a88b264187f1a1516977309fd6b12"]},
+{"name":"Solomon 第1期 発狂十段","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["91b0a169e6cde78b058fda8a404240a0","e6cc5a43e97b5e32b47fe014c577bfc3","485e3339c09eef0ea508dd0f7dd42d19","3216e0be0404e5311672194432d8b82a"]},
+{"name":"Solomon 第1期 発狂十段2","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["e79f933ddae3293aaa621a6aa4ebaa0d","caf28761421f884b86fae67efe1eeb6c","8f4dc7c8237ce74eaf5740808fa89844","82c1314cf8ab2c96321aaf67eb16c83c"]},
+{"name":"Solomon 第1期 発狂皆伝","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["5026c88dc5986a429a869495528ade14","ee9f9aadb4592505074302d51c07a3b5","c7bfe0504b2e103f156a1d6e4c113efb","01d9ea966de753dee21609a2b69a68e0"]},
+{"name":"Solomon 第1期 発狂皆伝2","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["5267eb8a7dde7bced341bd0e261d4008","bea09a3c942e4118bc626924b16ed7bd","cfad3baadce9e02c45021963453d7c94","6d36346d7d87daf52eccd4aacf93fc52"]},
+{"name":"Solomon 第1期 Overjoy","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["284712605e020dfbd6b8be94afc053fd","655052be72cdca0efda4c89041c056e3","8f2a82e4f1f3e299c5d761a4c673b9ae","c46a81cb184f5a804c119930d6eba748"]},
+{"name":"Solomon 第1期 Overjoy2","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["7bc4913beb3949308756e6edec8999e5","188a99f74ab71804f2e360dcf484545c","7b120f62df2da69ec06f2321d1969f67","24a1ac98307d14fc9094985849120d41"]},
+{"name":"Solomon 第1期 Solomon","constraint":["grade_random","gauge_lr2","ln",""],"md5": ["4ef61e6b853dac78eee4e58f6f16841f","41217e6781381b7363d187fdb6a5d8fa","2461741e8f4e16e73cb2f2da061288d1","a03a6fb99314771b5f408e1556b1d124"]}
+
+
+
+
+
+
+
+
+
+
+
+]}
