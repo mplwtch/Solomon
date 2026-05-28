@@ -64,7 +64,7 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>SongArtist</th><th>Charter</th><th>ChartView</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>SongArtist</th><th>Charter</th><th>本体</th><th>差分</th><th>ChartView</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
@@ -97,6 +97,27 @@
                     // Charter
                     $("<td width='25%'>" + info[i].charter + "</td>").appendTo(str);
 
+                    // 本体URL
+                    if (info[i]["本体URL"] && info[i]["本体URL"].trim() !== "") {
+                        downloadLinks +=
+                            "<a href='" +
+                            info[i]["本体URL"] +
+                            "' target='_blank'>本体</a> ";
+                    }
+
+                    // 差分URL
+                    if (info[i]["差分URL"] && info[i]["差分URL"].trim() !== "") {
+                        downloadLinks +=
+                            "<a href='" +    
+                            info[i]["差分URL"] +
+                            "' target='_blank'>差分</a>";
+                    }            
+
+                    // 空欄対策
+                    if (downloadLinks === "") {
+                        downloadLinks = "";
+                    }
+                    
                     // 譜面画像
                     $("<td width='10%'>" +
                         "<a href='https://bms-score-viewer.pages.dev/view?md5=" + info[
