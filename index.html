@@ -92,35 +92,33 @@
                         .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
 
                     // Artist
-                    $("<td width='25%'>" + info[i].song_artist + "</td>").appendTo(str);
+                    $("<td width='13%'>" + info[i].song_artist + "</td>").appendTo(str);
                     
                     // Charter
-                    $("<td width='25%'>" + info[i].charter + "</td>").appendTo(str);
+                    $("<td width='13%'>" + info[i].charter + "</td>").appendTo(str);
 
 
-// Download列
-var downloadLinks = "";
+                    // Download列
+                    var downloadLinks = "";
 
-// 本体URL
-if (info[i]["本体URL"] && info[i]["本体URL"].trim() !== "") {
-    downloadLinks +=
-        "<a href='" +
-        info[i]["本体URL"] +
-        "' target='_blank'>本体</a> ";
-}
+                    // 本体URL
+                    if (info[i]["本体URL"] && info[i]["本体URL"].trim() !== "") {
+                        downloadLinks +=
+                            "<a href='" +
+                            info[i]["本体URL"] +
+                            "' target='_blank'>本体</a> ";
+                    }
 
-// 差分URL
-if (info[i]["差分URL"] && info[i]["差分URL"].trim() !== "") {
-    downloadLinks +=
-        "<a href='" +
-        info[i]["差分URL"] +
-        "' target='_blank'>差分</a>";
-}
+                    // 差分URL
+                    if (info[i]["差分URL"] && info[i]["差分URL"].trim() !== "") {
+                        downloadLinks +=
+                            "<a href='" +
+                            info[i]["差分URL"] +
+                            "' target='_blank'>差分</a>";
+                    }
 
-// Download列を追加
-$("<td width='10%'>" + downloadLinks + "</td>").appendTo(str);
-
-
+                    // Download列を追加
+                    $("<td width='13%'>" + downloadLinks + "</td>").appendTo(str);
                     
                     // 譜面画像
                     $("<td width='10%'>" +
