@@ -64,13 +64,13 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>SongArtist</th><th>Charter</th><th>本体</th><th>差分</th><th>ChartView</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>SongArtist</th><th>Charter</th><th>Download</th><th>ChartView</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
                     if (x != info[i].level) {
                         if (obj_sep != null) {
-                            obj_sep.html("<td colspan='5'>" + "<b>" + mark + x + " (" + count +
+                            obj_sep.html("<td colspan='6'>" + "<b>" + mark + x + " (" + count +
                                 "譜面)</b></td>");
                         }
                         obj_sep = $("<tr class='table-dark' style='text-align:center' id='" + mark + info[i].level +
@@ -97,26 +97,30 @@
                     // Charter
                     $("<td width='25%'>" + info[i].charter + "</td>").appendTo(str);
 
-                    // 本体URL
-                    if (info[i]["本体URL"] && info[i]["本体URL"].trim() !== "") {
-                        downloadLinks +=
-                            "<a href='" +
-                            info[i]["本体URL"] +
-                            "' target='_blank'>本体</a> ";
-                    }
 
-                    // 差分URL
-                    if (info[i]["差分URL"] && info[i]["差分URL"].trim() !== "") {
-                        downloadLinks +=
-                            "<a href='" +    
-                            info[i]["差分URL"] +
-                            "' target='_blank'>差分</a>";
-                    }            
+// Download列
+var downloadLinks = "";
 
-                    // 空欄対策
-                    if (downloadLinks === "") {
-                        downloadLinks = "";
-                    }
+// 本体URL
+if (info[i]["本体URL"] && info[i]["本体URL"].trim() !== "") {
+    downloadLinks +=
+        "<a href='" +
+        info[i]["本体URL"] +
+        "' target='_blank'>本体</a> ";
+}
+
+// 差分URL
+if (info[i]["差分URL"] && info[i]["差分URL"].trim() !== "") {
+    downloadLinks +=
+        "<a href='" +
+        info[i]["差分URL"] +
+        "' target='_blank'>差分</a>";
+}
+
+// Download列を追加
+$("<td width='10%'>" + downloadLinks + "</td>").appendTo(str);
+
+
                     
                     // 譜面画像
                     $("<td width='10%'>" +
